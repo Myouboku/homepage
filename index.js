@@ -2,6 +2,7 @@ const express = require('express');
 const handlebars = require('handlebars');
 const fs = require('fs');
 const res = require('express/lib/response');
+const { Script } = require('vm');
 const app = express();
 const port = 3030;
 
@@ -18,3 +19,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Listening address on : http://localhost:${port}/`);
 });
+
+<Script> let timestamp = Math.round(new Date().getTime() / 1000); </Script>
