@@ -1,0 +1,18 @@
+{
+  "data": {
+    "Youtube": {
+      "Markiplier": "https://www.youtube.com/c/markiplier",
+      "DistroTube": "https://www.youtube.com/c/DistroTube",
+      "Mental Outlaw": "https://www.youtube.com/c/MentalOutlaw"
+    },
+    "GitHub": {
+      "PokeAPI": "https://github.com/PokeAPI/pokedex-promise-v2",
+      "Polybar": "https://github.com/polybar/polybar",
+      "Polybar-themes": "https://github.com/adi1090x/polybar-themes"
+    },
+    "Twitch": {
+      "Koumoo": "https://www.twitch.tv/koumoo",
+      "Josplay": "https://www.twitch.tv/josplay"
+    }
+  }
+}
