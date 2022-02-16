@@ -1,4 +1,5 @@
 <html>
+<title>Homepage</title>
 
 <style>
   /* suppression scrollbars et autre */
@@ -26,7 +27,7 @@
     margin-top: 10%;
   }
 
-  /* TODO: voir rapprocher tableaux */
+  /* TODO: voir réduire espace tableaux */
   .table {
     border: 1px solid;
     border-radius: 1em;
@@ -79,9 +80,10 @@
 </style>
 
 <body>
-  {{!-- TODO: ajouter possibilité de modifier les bookmarks dans json --}}
-  {{!-- TODO: possibilité d'ajouter de nouveaux bookmarks et nouvelles catégories --}}
-  {{!-- TODO: voir si instaurer une limite de catégories ou un défilement horizontal --}}
+  {{!-- TODO: ajouter possibilité de modif les bookmarks dans json, modif ordre aff --}}
+  {{!-- TODO: possibilité d'ajouter de nouveaux bookmarks et nouvelles categs --}}
+  {{!-- TODO: voir si instaurer une limite de categs ou un défilement horizontal --}}
+  {{!-- TODO: rendre les listes redimensionnables, stockage positionnement dans cache --}}
   <div class="grid-container">
     {{#each data}}
     <div class="table">
