@@ -1,3 +1,105 @@
+<html>
+<title>Homepage</title>
+
+<style>
+  /* suppression scrollbars et autre */
+  /* Pour Firefox et global */
+  * {
+    color-scheme: dark;
+    background-color: #170f0f;
+    scrollbar-width: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-stretch: normal;
+  }
+
+  /* Pour navigateurs basés chromium */
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+  }
+
+  /* TODO: voir réduire espace tableaux */
+  .table {
+    border: 1px solid;
+    border-radius: 1em;
+    border-collapse: collapse;
+    width: 200px;
+    height: fit-content;
+    max-height: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    overflow-x: clip;
+    overflow-y: auto;
+    align-items: baseline;
+  }
+
+  .row {
+    width: 200px;
+  }
+
+  [class*="cell"] {
+    padding: 0.5em;
+  }
+
+  .head-cell {
+    text-align: center;
+    border-bottom: 1px solid;
+  }
+
+  #sticky {
+    position: sticky;
+    top: 0;
+  }
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: coral;
+    transition-property: color;
+    transition-duration: 500ms;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: aquamarine;
+  }
+
+  a:active {
+    text-decoration: none;
+    color: coral;
+  }
+</style>
+
 <body>
-    <h1>{{word1}} {{word2}}</h1>
+  {{!-- TODO: ajouter possibilité de modif les bookmarks dans json, modif ordre aff --}}
+  {{!-- TODO: possibilité d'ajouter de nouveaux bookmarks et nouvelles categs --}}
+  {{!-- TODO: voir si instaurer une limite de categs ou un défilement horizontal --}}
+  {{!-- TODO: rendre les listes redimensionnables, stockage positionnement dans cache --}}
+  <div class="grid-container">
+    {{#each data}}
+    <div class="table">
+      <div id="sticky" class="row">
+        <div class="head-cell"><b>{{@key}}</b></div>
+      </div>
+      {{#each this}}
+      <div class="row">
+        <a href='{{this}}'>
+          <div class="cell">{{maxCellChar @key}}</div>
+        </a>
+      </div>
+      {{/each}}
+    </div>
+    {{/each}}
+  </div>
 </body>
+
+</html>

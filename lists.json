@@ -1,0 +1,28 @@
+{
+  "data": {
+    "Youtube": {
+      "Abonnements": "https://www.youtube.com/feed/subscriptions",
+      "Markiplier": "https://www.youtube.com/c/markiplier",
+      "DistroTube": "https://www.youtube.com/c/DistroTube",
+      "Mental Outlaw": "https://www.youtube.com/c/MentalOutlaw",
+      "Feldup": "https://www.youtube.com/c/Feldup",
+      "Fireship": "https://www.youtube.com/c/Fireship",
+      "The Linux Experiment": "https://www.youtube.com/c/TheLinuxExperiment",
+      "Let's Game It Out": "https://www.youtube.com/c/LetsGameItOut",
+      "Linus Tech Tips": "https://www.youtube.com/c/LinusTechTips",
+      "JosplaySENPAI": "https://www.youtube.com/channel/UCv5hR0onMXYe1U84WP5mdVQ",
+      "Techquickie": "https://www.youtube.com/c/Techquickie",
+      "Tech_Sama": "https://www.youtube.com/c/TechSama",
+      "PCWorld": "https://www.youtube.com/c/pcworld"
+    },
+    "GitHub": {
+      "PokeAPI": "https://github.com/PokeAPI/pokedex-promise-v2",
+      "Polybar": "https://github.com/polybar/polybar",
+      "Polybar-themes": "https://github.com/adi1090x/polybar-themes"
+    },
+    "Twitch": {
+      "Koumoo": "https://www.twitch.tv/koumoo",
+      "Josplay": "https://www.twitch.tv/josplay"
+    }
+  }
+}
