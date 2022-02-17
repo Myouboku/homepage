@@ -1,0 +1,67 @@
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Homepage</title>
+</head>
+
+<body>
+
+  <div class="content">
+    {{!-- SECTION header content --}}
+    <div class="header-content">
+      {{!-- REVIEW revoir <path> et <polyline> si gère positionnement --}}
+          <div class="buttons">
+            <a href="#" class="cta">
+              <span>New</span>
+              <svg width="13px" height="10px" viewBox="0 0 13 10">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+              </svg>
+            </a><a href="#" class="cta">
+              <span>Edit</span>
+              <svg width="13px" height="10px" viewBox="0 0 13 10">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+              </svg>
+            </a>
+          </div>
+          {{!-- TODO possibilité gestion choix navigateur --}}
+          {{!-- TODO rendre navigation possible, redirection query google --}}
+          <div class="topnav">
+            <input type="text" placeholder="Search..">
+          </div>
+    </div>
+    {{!-- !SECTION --}}
+    {{!-- SECTION main content --}}
+    <div class="main-content">
+      {{!-- TODO ajouter possibilité de modif les bookmarks dans json, modif ordre aff --}}
+      {{!-- TODO possibilité d'ajouter de nouveaux bookmarks et nouvelles categs --}}
+      {{!-- NOTE voir si instaurer une limite de categs ou un défilement horizontal --}}
+      <div class="grid-container">
+        {{#each categories}}
+        <div class="table">
+          <div id="sticky" class="row">
+            <a href="{{this.link}}">
+              <div class="head-cell"><b>{{this.name}}</b></div>
+            </a>
+          </div>
+          {{#each bookmarks}}
+          <div class="row">
+            <a href='{{this}}'>
+              <div class="cell">{{maxCellChar @key}}</div>
+            </a>
+          </div>
+          {{/each}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    {{!-- !SECTION --}}
+  </div>
+</body>
+
+</html>

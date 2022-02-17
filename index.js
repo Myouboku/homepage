@@ -18,10 +18,13 @@ handlebars.registerHelper("maxCellChar", function (string) {
   return liste.join(" ");
 });
 
-const source = fs.readFileSync(path.resolve(__dirname, 'index.hbs')).toString();
+app.use(express.static(path.join(__dirname, '/public')));
+
+const source = fs.readFileSync(path.resolve(__dirname, 'public/templates/index.hbs')).toString();
 const template = handlebars.compile(source);
 const data = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'list.json')));
 const result = template(data);
+
 
 app.get('/', (req, res) => {
   res.send(result);
