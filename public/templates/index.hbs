@@ -8,12 +8,13 @@
   <title>Homepage</title>
 </head>
 
+<script src="/js/redirect.js"></script>
+
 <body>
 
   <div class="content">
     {{!-- SECTION header content --}}
     <div class="header-content">
-      {{!-- REVIEW revoir <path> et <polyline> si gère positionnement --}}
           <div class="buttons">
             <a href="#" class="cta">
               <span>New</span>
@@ -30,9 +31,13 @@
             </a>
           </div>
           {{!-- TODO possibilité gestion choix navigateur --}}
-          {{!-- TODO rendre navigation possible, redirection query google --}}
           <div class="topnav">
-            <input type="text" placeholder="Search..">
+            <form onsubmit="return redirect();">
+              <input id="searchbox" type="text" placeholder="Search..." autofocus>
+              <button id="searchbtn" type="submit" value="/images/search.png">
+                <img src="/images/searchWhite.png">
+              </button>
+            </form>
           </div>
     </div>
     {{!-- !SECTION --}}
