@@ -16,22 +16,26 @@ width: 0;
 
 .content {
 display: grid;
-grid-template-rows: 300px auto;
+grid-template-rows: 10em 5em auto;
 height: 100%;
 justify-content: center;
 }
 
 .header-content {
     display: grid;
-    grid-template-rows: auto 60px;
+    grid-auto-rows: auto;
+    align-content: flex-end;
 }
 
 /* SECTION buttons */
 /* TODO changer -> flex page-header */
 /* ::-webkit-validation-bubble-text-block */
 .buttons {
-    padding-top: 30px;
-    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-top: 1em;
+    padding-right: 1em;
 }
 
 .buttons * {
@@ -40,7 +44,6 @@ all: unset;
 
 .cta {
     position: relative;
-    margin: auto;
     padding: 19px 22px;
     transition: all .2s ease;
     border-radius: 28px;

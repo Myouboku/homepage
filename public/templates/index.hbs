@@ -12,33 +12,33 @@
 
 <body>
 
+  <div class="buttons">
+    <a href="#" class="cta">
+      <span>New</span>
+      <svg width="13px" height="10px" viewBox="0 0 13 10">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+    </a><a href="#" class="cta">
+      <span>Edit</span>
+      <svg width="13px" height="10px" viewBox="0 0 13 10">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+    </a>
+  </div>
   <div class="content">
     {{!-- SECTION header content --}}
     <div class="header-content">
-          <div class="buttons">
-            <a href="#" class="cta">
-              <span>New</span>
-              <svg width="13px" height="10px" viewBox="0 0 13 10">
-                <path d="M1,5 L11,5"></path>
-                <polyline points="8 1 12 5 8 9"></polyline>
-              </svg>
-            </a><a href="#" class="cta">
-              <span>Edit</span>
-              <svg width="13px" height="10px" viewBox="0 0 13 10">
-                <path d="M1,5 L11,5"></path>
-                <polyline points="8 1 12 5 8 9"></polyline>
-              </svg>
-            </a>
-          </div>
-          {{!-- TODO possibilité gestion choix navigateur --}}
-          <div class="topnav">
-            <form onsubmit="return redirect();">
-              <input id="searchbox" type="text" placeholder="Search..." autofocus>
-              <button id="searchbtn" type="submit" value="/images/search.png">
-                <img src="/images/searchWhite.png">
-              </button>
-            </form>
-          </div>
+      {{!-- TODO possibilité gestion choix navigateur --}}
+      <div class="topnav">
+        <form onsubmit="return redirect();">
+          <input id="searchbox" type="text" placeholder="Search..." autofocus>
+          <button id="searchbtn" type="submit" value="/images/search.png">
+            <img src="/images/searchWhite.png">
+          </button>
+        </form>
+      </div>
     </div>
     {{!-- !SECTION --}}
     {{!-- SECTION main content --}}
