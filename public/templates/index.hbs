@@ -9,12 +9,13 @@
 </head>
 
 <script src="/js/redirect.js"></script>
+<script src="/js/newElement.js"></script>
 
 <body>
 
   <div class="buttons">
     <a href="#" class="cta">
-      <span>New</span>
+      <span {{!-- onclick="return newElement();" --}}>New</span>
       <svg width="13px" height="10px" viewBox="0 0 13 10">
         <path d="M1,5 L11,5"></path>
         <polyline points="8 1 12 5 8 9"></polyline>
@@ -50,14 +51,14 @@
         {{#each categories}}
         <div class="table">
           <div id="sticky" class="row">
-            <a href="{{this.link}}">
-              <div class="head-cell"><b>{{this.name}}</b></div>
+            <a href="{{link}}">
+              <div class="head-cell"><b>{{name}}</b></div>
             </a>
           </div>
           {{#each bookmarks}}
           <div class="row">
             <a href='{{this}}'>
-              <div class="cell">{{maxCellChar @key}}</div>
+              <div class="cell">{{@key}}</div>
             </a>
           </div>
           {{/each}}
