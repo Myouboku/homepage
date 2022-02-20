@@ -1,13 +1,13 @@
 function refresh() {
-  var t = 1000; // rafraîchissement en millisecondes
+  let t = 1000; // rafraîchissement en millisecondes
   setTimeout("showDate()", t);
 }
 
 function showDate() {
-  var date = new Date();
-  var h = date.getHours();
-  var m = date.getMinutes();
-  var s = date.getSeconds();
+  let date = new Date();
+  let h = date.getHours();
+  let m = date.getMinutes();
+  let s = date.getSeconds();
   if (h < 10) {
     h = "0" + h;
   }
@@ -17,7 +17,7 @@ function showDate() {
   if (s < 10) {
     s = "0" + s;
   }
-  var time = h + ":" + m + ":" + s;
+  let time = h + ":" + m + ":" + s;
   document.getElementById("horloge").innerHTML = time;
   refresh();
 }
