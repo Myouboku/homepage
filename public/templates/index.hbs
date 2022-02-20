@@ -1,0 +1,73 @@
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Homepage</title>
+</head>
+
+<script src="/js/redirect.js"></script>
+<script src="/js/newElement.js"></script>
+
+<body>
+
+  <div class="buttons">
+    <a href="#" class="cta">
+      <span {{!-- onclick="return newElement();" --}}>New</span>
+      <svg width="13px" height="10px" viewBox="0 0 13 10">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+    </a><a href="#" class="cta">
+      <span>Edit</span>
+      <svg width="13px" height="10px" viewBox="0 0 13 10">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+    </a>
+  </div>
+  <div class="content">
+    {{!-- SECTION header content --}}
+    <div class="header-content">
+      {{!-- TODO possibilité gestion choix navigateur --}}
+      <div class="topnav">
+        <form onsubmit="return redirect();">
+          <input id="searchbox" type="text" placeholder="Search..." autofocus>
+          <button id="searchbtn" type="submit" value="/images/search.png">
+            <img src="/images/searchWhite.png">
+          </button>
+        </form>
+      </div>
+    </div>
+    {{!-- !SECTION --}}
+    {{!-- SECTION main content --}}
+    <div class="main-content">
+      {{!-- TODO ajouter possibilité de modif les bookmarks dans json, modif ordre aff --}}
+      {{!-- TODO possibilité d'ajouter de nouveaux bookmarks et nouvelles categs --}}
+      {{!-- NOTE voir si instaurer une limite de categs ou un défilement horizontal --}}
+      <div class="grid-container">
+        {{#each categories}}
+        <div class="table">
+          <div id="sticky" class="row">
+            <a href="{{link}}">
+              <div class="head-cell"><b>{{name}}</b></div>
+            </a>
+          </div>
+          {{#each bookmarks}}
+          <div class="row">
+            <a href='{{this}}'>
+              <div class="cell">{{@key}}</div>
+            </a>
+          </div>
+          {{/each}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    {{!-- !SECTION --}}
+  </div>
+</body>
+
+</html>
